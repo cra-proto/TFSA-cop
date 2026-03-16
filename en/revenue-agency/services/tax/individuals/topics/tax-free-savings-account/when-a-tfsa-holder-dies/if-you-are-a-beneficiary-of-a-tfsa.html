@@ -120,12 +120,12 @@
                             <h3 id="bensurvivor">Survivors may make exempt contributions</h3>
 					  <section class="alert alert-warning">
 <p class="h3 mrgn-tp-0">Change to how TFSA earnings after death are treated</p>
-<p>Starting on January 1, 2026, earnings accrued after the death of the TFSA holder up to the end of the rollover period could be eligible to be claimed as an exempt contribution. Refer to <a href="https://teams.microsoft.com/l/message/19:7da89671-b6f2-4963-b330-c5545f088b31_b804c88d-db73-4d1f-9310-99386f46d238@unq.gbl.spaces/1772046820336?context=%7B%22contextType%22%3A%22chat%22%7D">exempt contributions</a> for details on how these are usually claimed.</p>  
+<p>Starting on January 1, 2026, earnings accrued after the death of the TFSA holder up to the end of the rollover period could be eligible to be claimed as an exempt contribution. Refer to <a href="#exempt-contribution">exempt contributions</a> for details on how these are usually claimed.</p>  
 </section>
                             <p>A survivor who is designated as a beneficiary, or a surviving spouse or common-law partner in Quebec, may contribute all or part of their <a class="wb-lbx lbx-modal" href="#survivorpayment">survivor payment<span class="far fa-question-circle mrgn-lft-sm"></span></a> to their own TFSA and designate it as an <a class="wb-lbx lbx-modal" href="#exemptcontribution">exempt contribution<span class="far fa-question-circle mrgn-lft-sm"></span></a>. This contribution will not affect their own  available contribution room.</p>
                               <p>However, if there is an excess in the deceased holder&rsquo;s TFSA or if payments are received  by more than one survivor, the contribution cannot be exempt.</p>
                             
-                            <details>  
+                            <details id="exempt-contribution">   
                             <summary>How to designate an exempt contribution</summary>
                             <p>A contribution can be designated exempt if the  following criteria are met:</p>
                             <ul>
@@ -272,5 +272,18 @@
         <script src="https://cra-proto.github.io/gst-hst-business/templates/scripts/git-dev-options-e.js"></script>
         <script src="https://cra-proto.github.io/core-prototype/resources/tools/tinymce/tinymce.min.js"></script>
         <!-- END of github only scripts -->
+		<script>
+  function openTargetDetails() {
+    var hash = window.location.hash;
+    if (hash) {
+      var target = document.querySelector(hash);
+      if (target && target.tagName === 'DETAILS') {
+        target.open = true;
+      }
+    }
+  }
+  openTargetDetails();
+  window.addEventListener('hashchange', openTargetDetails);
+</script>
     </body>
 </html>
